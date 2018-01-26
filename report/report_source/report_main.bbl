@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+
+\bibitem{DBLP}
+C.~Szegedy, W.~Liu, Y.~Jia, P.~Sermanet, S.~E. Reed, D.~Anguelov, D.~Erhan,
+  V.~Vanhoucke, and A.~Rabinovich, ``Going deeper with convolutions,'' {\em
+  CoRR}, vol.~abs/1409.4842, 2014.
+
+\bibitem{linefollower}
+A.~Harom, ``Line follower robot,'' {\em Universiti Malaysia Perlis}, 2008.
+
+\bibitem{adam}
+D.~P. Kingma and J.~Ba, ``Adam: {A} method for stochastic optimization,'' {\em
+  CoRR}, vol.~abs/1412.6980, 2014.
+
+\bibitem{capt_img_script}
+P.~Gudge, ``Capture images from webcam for machine learning traning dataset,''
+  2018.
+
+\end{thebibliography}
