@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.1.26)  27 JAN 2018 04:00
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2018.1.26)  29 JAN 2018 20:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -256,82 +256,111 @@ LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 (Font)              Font shape `OT1/phv/b/sc' tried instead on input line 39.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 81.
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 91.
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.53561> on input line 91.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.6749> on input line 91.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.7678> on input line 91.
+<images/4_glenetadam_cropped_chart.jpg, id=1, 396.48125pt x 298.11375pt>
+File: images/4_glenetadam_cropped_chart.jpg Graphic file (type jpg)
 
-<images/training_chart.png, id=1, 757.83125pt x 550.055pt>
-File: images/training_chart.png Graphic file (type png)
-
-<use images/training_chart.png>
-Package pdftex.def Info: images/training_chart.png used on input line 99.
-(pdftex.def)             Requested size: 252.94499pt x 183.59181pt.
+<use images/4_glenetadam_cropped_chart.jpg>
+Package pdftex.def Info: images/4_glenetadam_cropped_chart.jpg used on input li
+ne 87.
+(pdftex.def)             Requested size: 252.94499pt x 190.1917pt.
  [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 
-] <images/data_collection.png, id=14, 4047.12pt x 3035.34pt>
+ <./images/4_glenetadam_cropped_chart.jpg>]
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 98.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.53561> on input line 98.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6.6749> on input line 98.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.7678> on input line 98.
+
+<images/training_chart.png, id=12, 757.83125pt x 550.055pt>
+File: images/training_chart.png Graphic file (type png)
+
+<use images/training_chart.png>
+Package pdftex.def Info: images/training_chart.png used on input line 106.
+(pdftex.def)             Requested size: 252.94499pt x 183.59181pt.
+
+<images/data_collection.png, id=14, 4047.12pt x 3035.34pt>
 File: images/data_collection.png Graphic file (type png)
 
 <use images/data_collection.png>
-Package pdftex.def Info: images/data_collection.png used on input line 128.
+Package pdftex.def Info: images/data_collection.png used on input line 136.
 (pdftex.def)             Requested size: 252.94499pt x 189.70828pt.
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 138.
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 146.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 138.
+(Font)              <8.03> on input line 146.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 138.
+(Font)              <5.62097> on input line 146.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 138.
+(Font)              <4.015> on input line 146.
 
 <images/Guava__395.png, id=15, 256.96pt x 256.96pt>
 File: images/Guava__395.png Graphic file (type png)
 
 <use images/Guava__395.png>
-Package pdftex.def Info: images/Guava__395.png used on input line 140.
+Package pdftex.def Info: images/Guava__395.png used on input line 148.
 (pdftex.def)             Requested size: 72.26999pt x 72.26982pt.
 
 <images/Banana__1661.png, id=16, 256.96pt x 256.96pt>
 File: images/Banana__1661.png Graphic file (type png)
 
 <use images/Banana__1661.png>
-Package pdftex.def Info: images/Banana__1661.png used on input line 141.
+Package pdftex.def Info: images/Banana__1661.png used on input line 149.
 (pdftex.def)             Requested size: 72.26999pt x 72.26982pt.
 
+<images/10_loss_accuracy.jpg, id=17, 999.735pt x 692.5875pt>
+File: images/10_loss_accuracy.jpg Graphic file (type jpg)
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+<use images/10_loss_accuracy.jpg>
+Package pdftex.def Info: images/10_loss_accuracy.jpg used on input line 180.
+(pdftex.def)             Requested size: 252.94499pt x 175.22835pt.
 
-<images/classify_many_2.png, id=17, 951.555pt x 218.8175pt>
+<images/9_evaluate_screenshot2_watermarked.jpg, id=18, 3858.415pt x 2244.385pt>
+File: images/9_evaluate_screenshot2_watermarked.jpg Graphic file (type jpg)
+<use images/9_evaluate_screenshot2_watermarked.jpg>
+Package pdftex.def Info: images/9_evaluate_screenshot2_watermarked.jpg used on 
+input line 190.
+(pdftex.def)             Requested size: 252.94499pt x 147.12302pt.
+
+<images/7_sgd_bottle.jpg, id=19, 2451.1575pt x 1254.6875pt>
+File: images/7_sgd_bottle.jpg Graphic file (type jpg)
+
+<use images/7_sgd_bottle.jpg>
+Package pdftex.def Info: images/7_sgd_bottle.jpg used on input line 200.
+(pdftex.def)             Requested size: 252.94499pt x 129.45825pt.
+
+<images/classify_many_2.png, id=20, 951.555pt x 218.8175pt>
 File: images/classify_many_2.png Graphic file (type png)
 
 <use images/classify_many_2.png>
-Package pdftex.def Info: images/classify_many_2.png used on input line 174.
+Package pdftex.def Info: images/classify_many_2.png used on input line 210.
 (pdftex.def)             Requested size: 252.94499pt x 58.16666pt.
-
-<images/classify_guava_2.png, id=18, 520.94624pt x 197.73875pt>
+ [2 <./images/training_chart.png> <./images/data_collection.png> <./images/Guav
+a__395.png> <./images/Banana__1661.png>]
+<images/classify_guava_2.png, id=30, 520.94624pt x 197.73875pt>
 File: images/classify_guava_2.png Graphic file (type png)
 
 <use images/classify_guava_2.png>
-Package pdftex.def Info: images/classify_guava_2.png used on input line 181.
+Package pdftex.def Info: images/classify_guava_2.png used on input line 217.
 (pdftex.def)             Requested size: 252.94499pt x 96.0118pt.
- [2 <./images/training_chart.png> <./images/data_collection.png> <./images/Guav
-a__395.png> <./images/Banana__1661.png> <./images/classify_many_2.png> <./image
-s/classify_guava_2.png>] (./report_main.bbl)
-[3
+ (./report_main.bbl [3 <./images/10_loss_accuracy.jpg> <./images/9_evaluate_scr
+eenshot2_watermarked.jpg> <./images/7_sgd_bottle.jpg> <./images/classify_many_2
+.png> <./images/classify_guava_2.png>])
+[4
 
 ] (./report_main.aux) ) 
 Here is how much of TeX's memory you used:
- 2542 strings out of 493304
- 41712 string characters out of 6139871
- 104660 words of memory out of 5000000
- 5970 multiletter control sequences out of 15000+600000
+ 2567 strings out of 493304
+ 42505 string characters out of 6139871
+ 103692 words of memory out of 5000000
+ 5990 multiletter control sequences out of 15000+600000
  44271 words of font info for 93 fonts, out of 8000000 for 9000
  960 hyphenation exceptions out of 8191
- 38i,11n,25p,952b,349s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,25p,982b,347s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.e
 nc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texl
@@ -340,10 +369,10 @@ st/fonts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
 ino/uplri8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfding/uzdr.pf
 b>
-Output written on report_main.pdf (3 pages, 19768982 bytes).
+Output written on report_main.pdf (4 pages, 20829931 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

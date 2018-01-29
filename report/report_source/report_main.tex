@@ -23,7 +23,7 @@
 
 \begin{abstract}
 The Inference project is a part of the Robotics Nanodegree. The objective was to understand and implement a prototype of vision system for a robotics application.
-Two implementations are provided for evaluation. First, the provided dataset of bottles, boxes and other images is used to train a Google Lenet\cite{DBLP} based network and the results are used to classify relevant images provided in the test suite. Second, data collection, data conditioning and Google Lenet based model training is used to train a network for food classification.
+Two implementations are provided for evaluation. First, the provided dataset of bottles, boxes and other images is used to train a Google Lenet\cite{DBLP} based network and the results are used to classify relevant images provided in the test suite. An average run time for evaluation is approximately 5 milliseconds and the model accuracy of the model is 75.40\% for the given test set. Second, data collection, data conditioning and Google Lenet based model training is used to train a network for food classification.
 
 \end{abstract}
 
@@ -80,10 +80,17 @@ In the first part, the provided images of boxes and bottles are used to train an
 The \textbf{NVIDIA Digits} environment - shell and GUI was used for structuring the databases and training, validation of the models.
 \subsection{Bottles and Boxes}
 
-For the first part of the project, the images provided were color RGB images with size 256x256. For simplicity purposes, the networks provided in the digits workspace were used. Two pre-defined networks are available in the Digits workspace which take 256x256 RGB images as input. The training was done with 5 epochs first with Google LeNet with Adam Optimizer. Google LeNet was chosen as it offers state of the art results for ImageNet dataset and as it offers comparatively higher quality in classification results\cite{DBLP} at the cost of slightly higher compuational requirements \label{googlelenet}. GPUs were available for training hence quality was chosen over lower computational requirements in the tradeoff.  Adam Optimizer was chosen as it has been established to be more efficient compared to other optimizers \cite{adam}. The model with Adam Optimizer failed to converge. 
+For the first part of the project, the 10094 images provided were color RGB images with size 256x256. For simplicity purposes, the networks provided in the digits workspace were used. Two pre-defined networks are available in the Digits workspace which take 256x256 RGB images as input. The training was done with 5 epochs first with Google LeNet with Adam Optimizer. Google LeNet was chosen as it offers state of the art results for ImageNet dataset and as it offers comparatively higher quality in classification results\cite{DBLP} at the cost of slightly higher compuational requirements \label{googlelenet}. GPUs were available for training hence quality was chosen over lower computational requirements in the tradeoff.  Adam Optimizer was chosen as it has been established to be more efficient compared to other optimizers \cite{adam}. The model with Adam Optimizer accuracy failed to go beyond 50\% Refer image: \ref{fig:boxes_adam_opt}
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{images/4_glenetadam_cropped_chart}
+      \caption{Google Lenet Adam Optimization Bottless and Boxes: Training Progress Chart}
+      \label{fig:boxes_adam_opt}
+\end{figure}
 
 In the next step the same Google LeNet network was used with standard SGD optimizer with 5 epochs and 0.01 learning rate at the start. 25\% of the dataset was used for validation. The test dataset was stored separately before training.
-Once the model was found to be converging, the final model was set to train with an initial learning rate of 0.01 and 10 epochs of the network 22-layer Google LeNet.\cite{DBLP}. The test images were used to determine performance of the trained model. Speed of each individual classification run was also evaluated. Once trained the Google LeNet network model provides quick classification on GPU <10ms. 
+Once the model was found to be converging, the final model was set to train with an initial learning rate of 0.01 and 5 epochs of the network 22-layer Google LeNet.\cite{DBLP}. The test images were used to determine performance of the trained model. Speed of each individual classification run was also evaluated. Once trained the Google LeNet network model provides quick classification on GPU <10ms. 
 
 \subsection{Food Classification}
 6020 images were collected with approximately equal number of images for each of the classes:
@@ -102,22 +109,23 @@ Google Lenet\cite{DBLP} model was chosen for its effectiveness to classificiatio
 \end{figure}
 
 %example for Bullet point list
-
-\begin{itemize}
-\item example
-\end {itemize}
+%
+%\begin{itemize}
+%\item example
+%\end {itemize}
 
 
 
 %example for numbered list
-\begin{enumerate}
-\item example
-
-\end{enumerate}
+%\begin{enumerate}
+%\item example
+%
+%\end{enumerate}
 
 \section{Data Acquisition}
 \subsection{Bottles and Boxes}
-The dataset was acquired by using a TX2 kit to capture images of boxes and bottles off a conveyor belt. The captured images were provided as standard in the \textit{Digits} workspace. 
+The dataset was acquired by using a TX2 kit to capture images of boxes and bottles off a conveyor belt. The captured images were provided as standard in the \textit{Digits} workspace. Total of 10094 images were provide out of which 7570 images were used as training set and remaining 2524 were used as the validation set.
+
 
 \subsection{Food Classification}
 This dataset was collected by capturing images with a standard webcamera: \emph{Logitech 270} in diffused sunlight. The camera was connected to a Lenovo laptop (Figure \ref{fig:datacoll1}) using the USB port and images were captured by using a script\cite{capt_img_script}. The python language script used \emph{OpenCV} python library \textbf{cv2} to render and transform the images. 
@@ -126,7 +134,7 @@ This dataset was collected by capturing images with a standard webcamera: \emph{
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=\linewidth]{images/data_collection}
-      \caption{Data Collection Setup}
+      \caption{Food Classification: Data Collection Setup}
       \label{fig:datacoll1}
 \end{figure}
 
@@ -165,6 +173,34 @@ This dataset was collected by capturing images with a standard webcamera: \emph{
 
 \section{Results}
 \subsection{Bottles and Boxes}
+The accuracy of Google Lenet Trained model with SGD optimizer was nearly 100\%. The learning stage loss and accuracy graphs are shown below Refer Figure: \ref{fig:boxes_learning} 
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{images/10_loss_accuracy}
+      \caption{Boxes and Bottles: Learning Chart}
+      \label{fig:boxes_learning}
+\end{figure}
+
+The results from the \emph{evaluate} command are shown in the figure \ref{fig:boxes_evaluate}. The average time for the evaluation runs is around 5 milliseconds which is within the provided constraint of it being below 10 milliseconds. The model accuracy is 75.40\% which is above the requirement minimum 75\% required from the implementation.
+
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{images/9_evaluate_screenshot2_watermarked}
+      \caption{Boxes and Bottles: "evaluate" Command Result}
+      \label{fig:boxes_evaluate}
+\end{figure}
+
+A sample classification run of one of the bottle images is shown below in figure \ref{fig:bottle_classify}. The accuracy for prediction is 99.87\%
+
+
+\begin{figure}[thpb]
+      \centering
+      \includegraphics[width=\linewidth]{images/7_sgd_bottle}
+      \caption{Boxes and Bottles: Sample Bottle Evaluation Result}
+      \label{fig:bottle_classify}
+\end{figure}
 
 \subsection{Food Classification}
 The classification performance from the food classification model for the included test images is satisfactory. The classification confidence is above 95\% for the images from the test dataset. The model appears to be overfitting according the the training chart Fig:\ref{fig:food_class1} and the resulting test image classification (Figures: \ref{fig:classify_many} \& \ref{fig:classify_guava}).
@@ -172,7 +208,7 @@ The classification performance from the food classification model for the includ
 \begin{figure}[thpb]
       \centering
       \includegraphics[width=\linewidth]{images/classify_many_2}
-      \caption{Classify Many Result: Show Overfitting}
+      \caption{Food Classification: Classify Many Result Show Overfitting}
       \label{fig:classify_many}
 \end{figure}
 
@@ -183,10 +219,10 @@ The classification performance from the food classification model for the includ
       \label{fig:classify_guava}
 \end{figure}
 
-
-This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If you results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. 
-Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time
-For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
+%
+%This is typically the hardest part of the report for many. You want to convey your results in an unbiased fashion. If you results are good, you can objectively note this. Similarly, you may do this if they are bad as well. You do not want to justify your results here with discussion; this is a topic for the next session. 
+%Present the results of your robotics project model and the model you used for the supplied data with the appropriate accuracy and inference time
+%For demonstrating your results, it is incredibly useful to have some charts, tables, and/or graphs for the reader to review. This makes ingesting the information quicker and easier.
 
 \section{Discussion}
 For the first part of the project, the classification confidence is above 75\% is satisfactory and meets the given requirements. The avearge evaluation time is also approximately 5 milliseconds. This meets the given requirement for evaluation time to be less than 10 milliseconds. The Google LeNet network is optimized for computation on GPU due to parallelization and high scale performance optimization \cite{DBLP}.
